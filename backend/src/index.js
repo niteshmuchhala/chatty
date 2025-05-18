@@ -20,10 +20,11 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "http://localhost:5173",
+    origin: "https://chatty-one-gamma.vercel.app", // Your Vercel frontend
     credentials: true,
   })
 );
+
 
 // API Routes
 app.use("/api/auth", authRoutes);
